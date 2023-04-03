@@ -3,7 +3,7 @@
   "compilerOptions": {
     "target": "es5",
     "lib": ["es5", "dom"],
-    "types": ["cypress", "cypress-real-events", "node"]
+    "types": ["cypress", "cypress-real-events", "cypress-file-upload", "node"]
   },
   "include": ["**/*.ts"]
 }
