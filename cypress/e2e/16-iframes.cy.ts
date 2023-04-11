@@ -23,3 +23,23 @@ describe('Iframes example', () => {
     });
   });
 });
+
+describe('Typing on an Iframe using The Internet webpage', () => {
+  beforeEach(() => {
+    cy.visit(`${Cypress.env("theInternet")}/iframe`);
+  });
+
+  it('Simple and nested iframe', () => {
+    cy.get('#mce_0_ifr').then(($iframe) => {
+      const $body = $iframe.contents().find('body');
+
+      cy.wrap($body).find('p').type('{selectAll}{del}Hello World');
+    });
+
+    cy.get('#mce_0_ifr').then(($iframe) => {
+      const $body = $iframe.contents().find('body');
+
+      cy.wrap($body).find('p').should('have.text', 'Hello World');
+    });
+  });
+});

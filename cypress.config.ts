@@ -1,7 +1,7 @@
 import { defineConfig } from "cypress";
 
 // Verify download import.
-const {isFileExist, findFiles } = require('cy-verify-downloads');
+const { isFileExist, findFiles } = require('cy-verify-downloads');
 
 export default defineConfig({
   e2e: {
