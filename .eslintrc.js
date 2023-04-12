@@ -1,7 +1,8 @@
 module.exports = {
 	"env": {
 		"browser": true,
-		"es2021": true
+		"es2021": true,
+		"node": true // https://stackoverflow.com/questions/70058316/eslintrc-js-module-is-not-defined
 	},
 	"extends": [
 		"eslint:recommended",
