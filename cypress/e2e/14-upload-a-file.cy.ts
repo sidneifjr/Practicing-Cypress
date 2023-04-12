@@ -1,14 +1,14 @@
-describe('Upload a file in the QA Demo site', () => {
-  beforeEach(() => {
-    cy.visit(`${Cypress.env("demonstrationQA")}/upload-download`);
-  });
+describe("Upload a file in the QA Demo site", () => {
+	beforeEach(() => {
+		cy.visit(`${Cypress.env("demonstrationQA")}/upload-download`)
+	})
 
-  it('Upload the file', () => {
-    // Usando dados estáticos presentes na pasta 'fixtures'.
-    cy.get('input#uploadFile').attachFile('example.json')
-    cy.get('p#uploadedFilePath').should("contain", "example.json");
-  });
-});
+	it("Upload the file", () => {
+		// Usando dados estáticos presentes na pasta 'fixtures'.
+		cy.get("input#uploadFile").attachFile("example.json")
+		cy.get("p#uploadedFilePath").should("contain", "example.json")
+	})
+})
 
 // describe('Upload a file in the "The Internet" site', () => {
 //   beforeEach(() => {

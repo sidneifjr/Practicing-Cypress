@@ -1,9 +1,9 @@
-describe('Environment Variable Demo', () => {
-  beforeEach(() => {
-    cy.visit('/click');
-  })
+describe("Environment Variable Demo", () => {
+	beforeEach(() => {
+		cy.visit("/click")
+	})
 
-  it('Demo', () => {
-    cy.log(`Printing Environment Variable Value: ${Cypress.env("varEnv")}`)
-  });
-});
+	it("Demo", () => {
+		cy.log(`Printing Environment Variable Value: ${Cypress.env("varEnv")}`)
+	})
+})
