@@ -34,6 +34,10 @@ module.exports = {
 		"semi": [
 			"error",
 			"never"
+		],
+		"padding-line-between-statements": [
+			"error",
+			{ blankLine: "always", prev: "*", next: "return" }
 		]
 	}
 }
