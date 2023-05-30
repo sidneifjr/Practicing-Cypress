@@ -16,4 +16,28 @@ describe("Alerts example", () => {
 
 		cy.get("p#result").should("have.text", "You successfully clicked an alert")
 	})
+
+	it("JS Confirm (accept)", () => {
+		cy.contains("button", "Click for JS Confirm").click()
+
+		cy.on("window:alert", (message) => {
+			expect(message).to.be.equal("I am a JS Confirm")
+		})
+
+		cy.on("window:confirm", () =>  true)
+
+		cy.get("p#result").should("have.text", "You clicked: OK")
+	})
+
+	it("JS Confirm (cancel)", () => {
+		cy.contains("button", "Click for JS Confirm").click()
+
+		cy.on("window:alert", (message) => {
+			expect(message).to.be.equal("I am a JS Confirm")
+		})
+
+		cy.on("window:confirm", () =>  false)
+
+		cy.get("p#result").should("have.text", "You clicked: OK")
+	})
 })
