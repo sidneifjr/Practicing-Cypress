@@ -8,6 +8,12 @@ describe("Upload a file in the QA Demo site", () => {
 		cy.get("input#uploadFile").attachFile("example.json")
 		cy.get("p#uploadedFilePath").should("contain", "example.json")
 	})
+
+	// Teste do ESLint, para espaçamento entre linhas.
+	// function foo(){
+	// 	bar()
+	// 	return
+	// }
 })
 
 // describe('Upload a file in the "The Internet" site', () => {
