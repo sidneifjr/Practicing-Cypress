@@ -1,9 +1,8 @@
-
 {
   "compilerOptions": {
     "target": "es5",
     "lib": ["es5", "dom"],
-    "types": ["cypress", "cypress-real-events", "cypress-file-upload", "cy-verify-downloads", "node"]
+    "types": ["cypress", "cypress-real-events", "cypress-file-upload", "cy-verify-downloads", "node", "@testing-library/cypress"]
   },
   "include": ["**/*.ts"]
 }
